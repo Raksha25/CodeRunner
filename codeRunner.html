@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #header {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            background-color: #B6EAEE;
+            /* background-color:black; */
+        }
+
+        #logo {
+            /* padding-right: 50px; */
+            font-weight: bold;
+            font-size: 150%;
+            margin: auto 5px;
+            color: #227C7B;
+            -webkit-text-stroke: black 0.5px;
+        }
+
+        #runBtn {
+            /* margin-left: 20%; */
+            /* background-color: #EBF3FF; */
+            border: #EBF3FF 3px solid;
+            margin: 8px auto 8px 400px;
+            color: #227C7B;
+            /* margin: 10px 10px 10px 0px; */
+            background-color: white;
+            border-radius: 15px;
+            /* padding: 50px; */
+            /* margin-left:50px; */
+        }
+
+        #btnContainer {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            background-color: #B6EAEE;
+            justify-content: center;
+            margin-right: 35%;
+            padding: 10px;
+        }
+
+        .toggle-btn {
+            border: white 1px solid;
+            color: #227C7B;
+            padding: 5px;
+
+        }
+
+        .toggle-btn:hover {
+            background-color: #EBF3FF;
+        }
+
+        #html {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        #output {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .active {
+            background-color: black;
+        }
+
+        #bodyContainer {
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+        }
+
+        .panel {
+            display: none;
+        }
+
+        textarea {
+            height: 100vh;
+            width: 100vw;
+            resize: none;
+            background-color: rgb(251, 253, 255);
+            border: none;
+            border-right: 1px solid #227C7B;
+
+        }
+
+        iframe {
+            height: 100vh;
+            width: 100vh;
+            border: none;
+        }
+
+
+        hr {
+            background-color: #227C7B;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            CodeRunner
+        </div>
+        <button id="runBtn">Run</button>
+        <div id="btnContainer">
+            <div class="toggle-btn" id="html">HTML</div>
+            <div class="toggle-btn" id="css">CSS</div>
+            <div class="toggle-btn" id="js">JS</div>
+            <div class="toggle-btn" id="output">Output</div>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <textarea class="panelH" id="htmlTA" placeholder="Enter HTML"></textarea>
+        <textarea class="panel" id="cssTA" placeholder="Enter CSS"></textarea>
+        <textarea class="panel" id="jsTA" placeholder="Enter Java Script"></textarea>
+        <div>
+            <p style="margin:0px; color:grey" id="output-txt" class="panel">Output</p>
+            <hr>
+            <iframe id="outputDiv" class="panel"></iframe>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(".toggle-btn").click(function () {
+
+            $(this).toggleClass("active");
+            if ($(this).attr("id") == "output") {
+
+                $("#outputDiv").toggle();
+                $("#output-txt").toggle();
+
+            }
+            else {
+                $("#" + $(this).attr("id") + "TA").toggle();
+            }
+
+
+        })
+        $()
+        $("#runBtn").click(function () {
+            var addCode = "<html><head><style type='text/css'>" + $("#cssTA").val() +
+                "</style></head><body>" + $("#htmlTA").val() + "</body></html>";
+
+            $("iframe").contents().find("html").html(addCode);
+            document.getElementById("outputDiv").contentWindow.eval($("#jsTA").val());
+        })
+        if ($("#htmlTA").is(":visible")) {
+
+            $("#html").addClass("active");
+        }
+
+    </script>
+</body>
+
+</html>
