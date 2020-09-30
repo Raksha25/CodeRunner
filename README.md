@@ -9,7 +9,7 @@ Code Runner is a text editor made for compiling for HTML, CSS and Java Script. I
   
 * Few ideas which can be added in the initial state of CodeRunner (Definitely all ideas are welcomed these are just suggestions):
   * Adding dark mode/changing theme
-  * Make it responsive for mobile view.
+  * Make it responsive.
   * Styling can be enhanced.
   
 * If you feel like contibuting in any other way and do not find it among above mentioned points, do comment about it!
