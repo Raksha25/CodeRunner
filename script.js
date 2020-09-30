@@ -1,4 +1,4 @@
-alert("Click on language pills to open different tabs.");
+
 $(".toggle-btn").click(function () {
   $(this).toggleClass("active");
   if ($(this).attr("id") == "output") {
@@ -20,6 +20,17 @@ $("#runBtn").click(function () {
   $("iframe").contents().find("html").html(addCode);
   document.getElementById("outputDiv").contentWindow.eval($("#jsTA").val());
 });
+// Added later..//
+//************************************************//
+$("#customSwitch1").change(function(){
+  $(".panelH").toggleClass("dark-mode-panel");
+  $(".panel").toggleClass("dark-mode-panel");
+  $(".extra-cover").toggleClass("dark-mode-panel");
+  $(".panelH").toggleClass("text-colors");
+  $(".panel").toggleClass("text-colors");
+  $(".extra-cover").toggleClass("text-colors");
+});
+//************************************************//
 if ($("#htmlTA").is(":visible")) {
   $("#html").addClass("active");
 }
