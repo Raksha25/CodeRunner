@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div id="header">
+    <div id="header" class="head">
       <div id="logo">CodeRunner</div>
 
       <button id="runBtn">Run</button>
@@ -20,6 +20,7 @@
         <div class="toggle-btn" id="js">JS</div>
         <div class="toggle-btn" id="output">Output</div>
       </div>
+      <button id="toggleDarkMode" onclick="toggleDarkMode()" class="toggleModeButton">Dark Mode</button>
     </div>
     <div id="bodyContainer">
       <textarea class="panelH" id="htmlTA" placeholder="Enter HTML"></textarea>
@@ -37,5 +38,11 @@
         <iframe id="outputDiv" class="panel"></iframe>
       </div>
     </div>
+    <script>
+      function toggleDarkMode() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
   </body>
 </html>

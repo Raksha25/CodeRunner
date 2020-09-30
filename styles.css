@@ -99,3 +99,47 @@ iframe {
 hr {
     background-color: #227C7B;
 }
+.toggleModeButton{
+    border:1px solid #227C7B;
+    margin: 10px;
+    background-color: whitesmoke;
+    position: relative;
+    right: 70px;
+}
+.dark-mode #bodyContainer,
+.dark-mode textarea,
+.dark-mode .panel{
+    color: cornsilk!important;
+    background-color: #1b262c;
+}
+.dark-mode textarea::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  .dark-mode #logo{
+      color: #bbe1fa!important;
+  }
+.dark-mode .head{
+    background-color: #0f4c75!important;
+}
+.dark-mode #runBtn{
+    background-color: #bbe1fa!important;
+}
+.dark-mode #btnContainer{
+    color: white!important;
+    background-color: #0f4c75!important;
+    border-color: #227C7B!important;
+}
+.dark-mode #btnContainer .toggle-btn{
+    color: white!important;
+    border-color: #227C7B!important;
+
+}
+.dark-mode hr{
+    border-color: #227C7B;
+    margin: 0px!important;
+}
+.dark-mode .toggleModeButton{
+    background-color: #1b262c!important;
+    color: whitesmoke!important;
+}
