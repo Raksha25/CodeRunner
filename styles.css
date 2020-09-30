@@ -1,3 +1,7 @@
+*{
+    user-select: none;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -32,6 +36,7 @@ body {
     border-radius: 15px;
     /* padding: 50px; */
     /* margin-left:50px; */
+    cursor: pointer;
 }
 
 #btnContainer {
@@ -48,11 +53,12 @@ body {
     border: white 1px solid;
     color: #227C7B;
     padding: 5px;
+    cursor: pointer;
 
 }
 
 .toggle-btn:hover {
-    background-color: #EBF3FF;
+    background-color: #464646;
 }
 
 #html {
@@ -79,18 +85,18 @@ body {
     display: none;
 }
 
-textarea {
-    height: 100vh;
+#htmlTA,#cssTA,#jsTA {
+    height: calc(100vh - 51px);
     width: 100vw;
     resize: none;
-    background-color: rgb(251, 253, 255);
     border: none;
     border-right: 1px solid #227C7B;
-
+    display: block;
+    transition: ease-in-out .3s;
 }
 
 iframe {
-    height: 100vh;
+    height: calc(100vh - 51px);
     width: 100vh;
     border: none;
 }
@@ -98,4 +104,12 @@ iframe {
 
 hr {
     background-color: #227C7B;
+}
+
+.theme-toggle {
+    position: absolute;
+    margin: auto;
+    top: 12px;right: 10px;
+    cursor: pointer;
+    margin-right: 15px;
 }
