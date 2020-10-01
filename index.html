@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeRunner</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
 
-  <body>
-    <div id="header">
-      <div id="logo">CodeRunner</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeRunner</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
 
+<body>
+  <div id="header">
+    <div id="logo">CodeRunner</div>
+    <div id="headerIcons">
       <button id="runBtn">Run</button>
       <div id="btnContainer">
         <div class="toggle-btn" id="html">HTML</div>
@@ -21,21 +22,19 @@
         <div class="toggle-btn" id="output">Output</div>
       </div>
     </div>
-    <div id="bodyContainer">
-      <textarea class="panelH" id="htmlTA" placeholder="Enter HTML"></textarea>
-      <textarea class="panel" id="cssTA" placeholder="Enter CSS"></textarea>
-      <textarea
-        class="panel"
-        id="jsTA"
-        placeholder="Enter Java Script"
-      ></textarea>
-      <div>
-        <p style="margin: 0px; color: grey" id="output-txt" class="panel">
-          Output
-        </p>
-        <hr />
-        <iframe id="outputDiv" class="panel"></iframe>
-      </div>
+  </div>
+  <div id="bodyContainer">
+    <textarea class="panelH" id="htmlTA" placeholder="Enter HTML"></textarea>
+    <textarea class="panel" id="cssTA" placeholder="Enter CSS"></textarea>
+    <textarea class="panel" id="jsTA" placeholder="Enter Java Script"></textarea>
+    <div>
+      <p style="margin: 0px; color: grey" id="output-txt" class="panel">
+        Output
+      </p>
+      <hr />
+      <iframe id="outputDiv" class="panel"></iframe>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
