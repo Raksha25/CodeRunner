@@ -62,8 +62,22 @@ window.onload = function () {
       $("#outputDiv").toggle();
       $("#output-txt").toggle();
     } else {
-      $("#" + $(this).attr("id") + "TA").toggle();
+      if (window.innerWidth < 500) {
+        document.getElementById("htmlTA").style.display = "none";
+        document.getElementById("cssTA").style.display = "none";
+        document.getElementById("jsTA").style.display = "none";
+        // document.getElementById("outputDiv").style.display = "none";
+
+        document.getElementById("html").classList.remove("active");
+        document.getElementById("css").classList.remove("active");
+        document.getElementById("js").classList.remove("active");
+        document.getElementById($(this).attr("id")).classList.add("active");
+        document.getElementById($(this).attr("id") + "TA").style.display = "block";
+      }
+      else
+        $("#" + $(this).attr("id") + "TA").toggle();
     }
+
   });
 
   $("#runBtn").click(function () {
