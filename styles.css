@@ -1,3 +1,7 @@
+*{
+    user-select: none;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -7,7 +11,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     background-color: #B6EAEE;
     /* background-color:black; */
 }
@@ -22,25 +25,29 @@ body {
 }
 
 #runBtn {
-    /* margin-left: 20%; */
-    /* background-color: #EBF3FF; */
-    border: #EBF3FF 3px solid;
-    margin: 8px auto 8px 400px;
+    border-radius: 7px;
+    padding: 5px 10px;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border: white 1px solid;
     color: #227C7B;
-    /* margin: 10px 10px 10px 0px; */
-    background-color: white;
-    border-radius: 15px;
-    /* padding: 50px; */
-    /* margin-left:50px; */
+}
+#runBtn:hover {
+    background: #B6EAEE;
+}
+#runBtn:active {
+    background: #2e3440;
 }
 
 #btnContainer {
     display: flex;
-    width: 100%;
     flex-direction: row;
     background-color: #B6EAEE;
-    justify-content: center;
-    margin-right: 35%;
+    /* justify-content: center; */
     padding: 10px;
 }
 
@@ -48,11 +55,12 @@ body {
     border: white 1px solid;
     color: #227C7B;
     padding: 5px;
-
+    cursor: pointer;
+    font-size: 15px;
 }
 
 .toggle-btn:hover {
-    background-color: #EBF3FF;
+    background-color: #464646;
 }
 
 #html {
@@ -66,7 +74,7 @@ body {
 }
 
 .active {
-    background-color: black;
+    background-color: #2e3440;
 }
 
 #bodyContainer {
@@ -79,18 +87,18 @@ body {
     display: none;
 }
 
-textarea {
-    height: 100vh;
+#htmlTA,#cssTA,#jsTA {
+    height: calc(100vh - 51px);
     width: 100vw;
     resize: none;
-    background-color: rgb(251, 253, 255);
     border: none;
     border-right: 1px solid #227C7B;
-
+    display: block;
+    transition: ease-in-out .3s;
 }
 
 iframe {
-    height: 100vh;
+    height: calc(100vh - 51px);
     width: 100vh;
     border: none;
 }
@@ -98,4 +106,17 @@ iframe {
 
 hr {
     background-color: #227C7B;
+}
+
+.theme-toggle {
+    margin: auto 0;
+    cursor: pointer;
+    margin-right: 15px;
+    color: #2e3440;
+}
+
+@media (max-width: 768px) {
+    #logo {
+        font-size:17px;
+    }
 }
